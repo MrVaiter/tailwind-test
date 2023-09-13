@@ -6,6 +6,38 @@
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="./assets/fontawesome/js/solid.min.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <script>
+      window.onload = () => {
+        const mobileMenuIcon = document.getElementById("mobile-menu-button");
+        mobileMenuIcon.addEventListener("click", () => {
+          if (mobileMenuIcon.classList.contains("open")) {
+            mobileMenuIcon.classList.remove("open");
+
+            document.getElementById("top-menu-line").classList.remove("rotate-45")
+            document.getElementById("top-menu-line").classList.remove("top-2")
+            document.getElementById("top-menu-line").classList.remove("relative")
+
+            document.getElementById("middle-menu-line").classList.remove("opacity-0")
+
+            document.getElementById("bottom-menu-line").classList.remove("-rotate-45")
+            document.getElementById("bottom-menu-line").classList.remove("-top-2")
+            document.getElementById("bottom-menu-line").classList.remove("relative")
+          } else {
+            mobileMenuIcon.classList.add("open");
+
+            document.getElementById("top-menu-line").classList.add("rotate-45")
+            document.getElementById("top-menu-line").classList.add("top-2")
+            document.getElementById("top-menu-line").classList.add("relative")
+
+            document.getElementById("middle-menu-line").classList.add("opacity-0")
+
+            document.getElementById("bottom-menu-line").classList.add("-rotate-45")
+            document.getElementById("bottom-menu-line").classList.add("-top-2")
+            document.getElementById("bottom-menu-line").classList.add("relative")
+          }
+        });
+      };
+    </script>
   </head>
   <body>
     <main>
@@ -20,15 +52,42 @@
             </div>
           </div>
 
-          <div class="flex-1 flex items-center justify-end">
+          <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
+            <div id="mobile-menu-button" class="group">
+              <div
+                id="top-menu-line"
+                class="top-0 h-1 w-8 rounded-full bg-zinc-200 transition-all"
+              ></div>
+              <div
+                id="middle-menu-line"
+                class="mt-1 h-1 w-8 rounded-full bg-zinc-200 opacity-100 transition-all"
+              ></div>
+              <div
+                id="bottom-menu-line"
+                class="top-0 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all"
+              ></div>
+            </div>
+          </div>
+
+          <div class="hidden flex-1 items-center justify-end md:flex">
             <div class="menu-item">
               <span>Home</span>
             </div>
             <div class="menu-item">
               <span>Lineup</span>
             </div>
-            <div class="menu-item">
+            <div class="menu-item group">
               <span>Tickets</span>
+              <div
+                class="absolute top-full right-0 hidden whitespace-nowrap rounded-b-md bg-pink-500 text-right group-hover:block"
+              >
+                <div class="submenu-item">
+                  <span>Single day ticket</span>
+                </div>
+                <div class="submenu-item">
+                  <span>7 day ticket</span>
+                </div>
+              </div>
             </div>
             <div class="menu-item">
               <span>Support</span>

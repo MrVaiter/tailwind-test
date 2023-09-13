@@ -614,6 +614,25 @@ html {
   color: rgb(228 228 231 / var(--tw-text-opacity));
 }
 
+.submenu-item{
+  cursor: pointer;
+  padding: 1rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(251 207 232 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submenu-item:hover{
+  background-color: rgb(255 255 255 / 0.05);
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity));
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -639,8 +658,41 @@ html {
   position: sticky;
 }
 
+.top-2{
+  top: 0.5rem;
+}
+
+.-top-2{
+  top: -0.5rem;
+}
+
 .top-0{
   top: 0px;
+}
+
+.top-full{
+  top: 100%;
+}
+
+.right-0{
+  right: 0px;
+}
+
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.ml-auto{
+  margin-left: auto;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
+}
+
+.block{
+  display: block;
 }
 
 .flex{
@@ -655,12 +707,12 @@ html {
   display: none;
 }
 
-.h-full{
-  height: 100%;
-}
-
 .h-1{
   height: 0.25rem;
+}
+
+.w-8{
+  width: 2rem;
 }
 
 .flex-1{
@@ -673,6 +725,16 @@ html {
 
 .grow{
   flex-grow: 1;
+}
+
+.rotate-45{
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-rotate-45{
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .rotate-180{
@@ -705,12 +767,35 @@ html {
   gap: 0.5rem;
 }
 
+.whitespace-nowrap{
+  white-space: nowrap;
+}
+
+.rounded-full{
+  border-radius: 9999px;
+}
+
+.rounded-b-md{
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
 .border{
   border-width: 1px;
 }
 
 .border-none{
   border-style: none;
+}
+
+.bg-zinc-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
+}
+
+.bg-pink-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 72 153 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r{
@@ -731,8 +816,12 @@ html {
   padding: 0.5rem;
 }
 
-.p-4{
-  padding: 1rem;
+.pr-4{
+  padding-right: 1rem;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .text-2xl{
@@ -758,14 +847,17 @@ html {
   color: rgb(12 74 110 / var(--tw-text-opacity));
 }
 
-.text-pink-200{
-  --tw-text-opacity: 1;
-  color: rgb(251 207 232 / var(--tw-text-opacity));
-}
-
 .underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+.opacity-100{
+  opacity: 1;
 }
 
 .ring{
@@ -778,23 +870,22 @@ html {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.transition-colors{
-  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+.transition-all{
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.ease-in-out{
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.group:hover .group-hover\:block{
+  display: block;
 }
 
-.hover\:bg-white\/10:hover{
-  background-color: rgb(255 255 255 / 0.1);
-}
+@media (min-width: 768px){
+  .md\:flex{
+    display: flex;
+  }
 
-.hover\:text-zinc-200:hover{
-  --tw-text-opacity: 1;
-  color: rgb(228 228 231 / var(--tw-text-opacity));
+  .md\:hidden{
+    display: none;
+  }
 }
