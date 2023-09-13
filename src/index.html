@@ -13,27 +13,45 @@
           if (mobileMenuIcon.classList.contains("open")) {
             mobileMenuIcon.classList.remove("open");
 
-            document.getElementById("top-menu-line").classList.remove("rotate-45")
-            document.getElementById("top-menu-line").classList.remove("top-2")
-            document.getElementById("top-menu-line").classList.remove("relative")
+            document
+              .getElementById("top-menu-line")
+              .classList.remove("rotate-45");
+            document.getElementById("top-menu-line").classList.remove("top-2");
+            document
+              .getElementById("top-menu-line")
+              .classList.remove("relative");
 
-            document.getElementById("middle-menu-line").classList.remove("opacity-0")
+            document
+              .getElementById("middle-menu-line")
+              .classList.remove("opacity-0");
 
-            document.getElementById("bottom-menu-line").classList.remove("-rotate-45")
-            document.getElementById("bottom-menu-line").classList.remove("-top-2")
-            document.getElementById("bottom-menu-line").classList.remove("relative")
+            document
+              .getElementById("bottom-menu-line")
+              .classList.remove("-rotate-45");
+            document
+              .getElementById("bottom-menu-line")
+              .classList.remove("-top-2");
+            document
+              .getElementById("bottom-menu-line")
+              .classList.remove("relative");
           } else {
             mobileMenuIcon.classList.add("open");
 
-            document.getElementById("top-menu-line").classList.add("rotate-45")
-            document.getElementById("top-menu-line").classList.add("top-2")
-            document.getElementById("top-menu-line").classList.add("relative")
+            document.getElementById("top-menu-line").classList.add("rotate-45");
+            document.getElementById("top-menu-line").classList.add("top-2");
+            document.getElementById("top-menu-line").classList.add("relative");
 
-            document.getElementById("middle-menu-line").classList.add("opacity-0")
+            document
+              .getElementById("middle-menu-line")
+              .classList.add("opacity-0");
 
-            document.getElementById("bottom-menu-line").classList.add("-rotate-45")
-            document.getElementById("bottom-menu-line").classList.add("-top-2")
-            document.getElementById("bottom-menu-line").classList.add("relative")
+            document
+              .getElementById("bottom-menu-line")
+              .classList.add("-rotate-45");
+            document.getElementById("bottom-menu-line").classList.add("-top-2");
+            document
+              .getElementById("bottom-menu-line")
+              .classList.add("relative");
           }
         });
       };
@@ -66,6 +84,11 @@
                 id="bottom-menu-line"
                 class="top-0 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all"
               ></div>
+            </div>
+            <div
+              class="absolute left-0 top-[62px] w-full bg-gradient-to-r from-rose-500 to-pink-500"
+            >
+              mobile menu
             </div>
           </div>
 
