@@ -12,46 +12,17 @@
         mobileMenuIcon.addEventListener("click", () => {
           if (mobileMenuIcon.classList.contains("open")) {
             mobileMenuIcon.classList.remove("open");
-
-            document
-              .getElementById("top-menu-line")
-              .classList.remove("rotate-45");
-            document.getElementById("top-menu-line").classList.remove("top-2");
-            document
-              .getElementById("top-menu-line")
-              .classList.remove("relative");
-
-            document
-              .getElementById("middle-menu-line")
-              .classList.remove("opacity-0");
-
-            document
-              .getElementById("bottom-menu-line")
-              .classList.remove("-rotate-45");
-            document
-              .getElementById("bottom-menu-line")
-              .classList.remove("-top-2");
-            document
-              .getElementById("bottom-menu-line")
-              .classList.remove("relative");
           } else {
             mobileMenuIcon.classList.add("open");
+          }
+        });
 
-            document.getElementById("top-menu-line").classList.add("rotate-45");
-            document.getElementById("top-menu-line").classList.add("top-2");
-            document.getElementById("top-menu-line").classList.add("relative");
-
-            document
-              .getElementById("middle-menu-line")
-              .classList.add("opacity-0");
-
-            document
-              .getElementById("bottom-menu-line")
-              .classList.add("-rotate-45");
-            document.getElementById("bottom-menu-line").classList.add("-top-2");
-            document
-              .getElementById("bottom-menu-line")
-              .classList.add("relative");
+        const ticketMenuItem = document.getElementById("ticket-menu-item");
+        ticketMenuItem.addEventListener("click", () => {
+          if (ticketMenuItem.classList.contains("open")) {
+            ticketMenuItem.classList.remove("open");
+          } else {
+            ticketMenuItem.classList.add("open");
           }
         });
       };
@@ -71,24 +42,53 @@
           </div>
 
           <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
-            <div id="mobile-menu-button" class="group">
+            <div id="mobile-menu-button" class="group peer">
               <div
-                id="top-menu-line"
-                class="top-0 h-1 w-8 rounded-full bg-zinc-200 transition-all"
+                class="relative top-0 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:top-2 group-open:rotate-45"
               ></div>
               <div
-                id="middle-menu-line"
-                class="mt-1 h-1 w-8 rounded-full bg-zinc-200 opacity-100 transition-all"
+                class="mt-1 h-1 w-8 rounded-full bg-zinc-200 opacity-100 transition-all group-open:opacity-0"
               ></div>
               <div
-                id="bottom-menu-line"
-                class="top-0 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all"
+                class="relative top-0 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:-top-2 group-open:-rotate-45"
               ></div>
             </div>
             <div
-              class="absolute left-0 top-[62px] w-full bg-gradient-to-r from-rose-500 to-pink-500"
+              class="absolute left-0 top-[62px] hidden w-full bg-gradient-to-r from-rose-500 to-pink-500 peer-open:block"
             >
-              mobile menu
+              <div
+                class="relative flex h-full cursor-pointer items-center justify-center bg-white/10 p-4 font-bold text-pink-200 transition-colors hover:text-zinc-200"
+              >
+                <span>Home</span>
+              </div>
+              <div
+                class="relative flex h-full cursor-pointer items-center justify-center bg-white/10 p-4 font-bold text-pink-200 transition-colors hover:text-zinc-200"
+              >
+                <span>Lineup</span>
+              </div>
+              <div
+                id="ticket-menu-item"
+                class="group relative h-full cursor-pointer items-center justify-center bg-white/10 text-pink-200 transition-colors hover:text-zinc-200"
+              >
+                <div class="p-4 text-center font-bold">Tickets</div>
+                <div>
+                  <div
+                    class="relative hidden p-4 text-center text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200 group-open:block"
+                  >
+                    <span>Single day ticket</span>
+                  </div>
+                  <div
+                    class="relative hidden p-4 text-center text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200 group-open:block"
+                  >
+                    <span>7 day tickert</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="relative flex h-full cursor-pointer items-center justify-center bg-white/10 p-4 font-bold text-pink-200 transition-colors hover:text-zinc-200"
+              >
+                <span>Support</span>
+              </div>
             </div>
           </div>
 
@@ -117,6 +117,49 @@
             </div>
           </div>
         </nav>
+
+        <div
+          style="background-image: url('./assets/images/hero.jpg')"
+          class="flex h-[calc(100vh-200px)] min-h-[400px] flex-col items-center justify-center bg-cover bg-fixed bg-center"
+        >
+          <div
+            class="rounded-xl bg-white/30 py-2 px-4 text-center backdrop-blur-md"
+          >
+            <div class="relative">
+              <img src="./assets/images/logo.png" alt="" width="175" />
+              <div class="flex items-center justify-center mt-[-70px] mb-5">
+                <div 
+                  class="flex h-14 w-14 items-center justify-center rounded-full bg-pink-500 gap-1"
+                >
+                  <div class="h-2 w-1 bg-pink-300 rounded-full animate-wavey"></div>
+                  <div class="h-3 w-1 bg-pink-200 rounded-full animate-wavey"></div>
+                  <div class="h-4 w-1 bg-pink-100 rounded-full animate-wavey"></div>
+                  <div class="h-3 w-1 bg-pink-200 rounded-full animate-wavey"></div>
+                  <div class="h-2 w-1 bg-pink-300 rounded-full animate-wavey"></div>
+                </div>
+              </div>
+            </div>
+            <div class="text-5xl font-bold">
+              tw:<span class="text-sky-900">mf</span>
+            </div>
+          </div>
+          <div class="mt-3 text-sm font-bold">
+            Keep me updated with news and promotions
+          </div>
+          <form class="mt-3 flex gap-2">
+            <input
+              type="email"
+              placeholder="Email"
+              class="rounded-sm border-white/40 bg-white/30 p-2 font-bold text-sky-900 placeholder-zinc-500 caret-pink-500 outline-pink-500 backdrop-blur-md focus:outline"
+            />
+            <button
+              type="submit"
+              class="cursor-pointer rounded-sm bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-900 hover:shadow-lg hover:shadow-black/20"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
       </header>
     </main>
   </body>
