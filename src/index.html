@@ -50,11 +50,11 @@
     </script>
   </head>
   <body class="dark">
-    <main class="bg-zinc-200 dark:bg-zinc-900">
+    <main class="bg-zinc-200 dark:bg-zinc-900 transition-colors duration-500">
       <header class="text-zinc-200">
         <div
           id="dark-mode-toggle"
-          class="fixed top-24 right-0 z-10 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 p-2 text-3xl text-zinc-200 dark:bg-zinc-200 dark:text-zinc-900"
+          class="fixed top-24 right-0 z-10 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 p-2 text-3xl text-zinc-200 dark:bg-zinc-200 dark:text-zinc-900 transition-colors duration-500"
         >
           <i class="fa-solid fa-sun dark:hidden"></i>
           <i class="fa-solid fa-moon hidden dark:inline"></i>
@@ -353,10 +353,10 @@
               <div class="font-bold">Corduroy Gary</div>
               <div class="text-zinc-400">9pm - Main Stage</div>
             </div>
-          </div>
+          </div> 
         </div>
 
-        <div class="pb-20">
+        <div class="pb-10">
           <h2 class="mt-20">Tickets</h2>
           <table
             class="mt-5 table w-full border-collapse border border-zinc-500"
@@ -382,7 +382,13 @@
             </caption>
           </table>
         </div>
+        <div class="flex justify-center pb-10">
+          <div class="btn btn-[#F23] h-10 w-40 flex items-center justify-center hover:btn-[#666] transition-colors duration-300 ease-in-out">
+            <p class="text-center">Test button</p>
+          </div>
+        </div>
       </div>
     </main>
+    
   </body>
 </html>
